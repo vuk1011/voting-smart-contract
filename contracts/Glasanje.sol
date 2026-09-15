@@ -62,7 +62,7 @@ contract Glasanje {
 
     /// @notice Vrati indeks i ime kandidata koji trenutno vodi.
     ///         Ako je između nekih kandidata nerešeno, vrati prvog pronađenog.
-    function winningCandidate()
+    function vratiVodecegKandidata()
         external
         view
         returns (uint256 pobednikIndeks, string memory pobednikIme)
