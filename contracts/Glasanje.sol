@@ -30,7 +30,7 @@ contract Glasanje {
 
     /// @notice Dajte Vaš glas kandidatu po indeksu.
     /// @param kandidatIndeks Indeks u nizu kandidata.
-    function vote(uint256 kandidatIndeks) external {
+    function glasaj(uint256 kandidatIndeks) external {
         require(!jeGlasao[msg.sender], unicode"Već ste glasali!");
         require(
             kandidatIndeks < kandidati.length,
