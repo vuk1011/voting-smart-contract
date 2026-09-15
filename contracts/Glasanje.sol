@@ -2,8 +2,8 @@
 pragma solidity ^0.8.20;
 
 /// @title Glasanje
-/// @notice Lista kandidata je fiksna, može se postaviti prilikom deplozment-a.
-///         Svaka adresa može glasati najviše jedanput i svi mogu pratiti rezultate uživo.
+/// @notice Lista kandidata je fiksna, može se postaviti prilikom deployment-a.
+///         Svaki učesnik može glasati najviše jedanput i svi mogu pratiti rezultate uživo.
 contract Glasanje {
     struct Kandidat {
         string ime;
@@ -29,7 +29,7 @@ contract Glasanje {
     }
 
     /// @notice Dajte Vaš glas kandidatu po indeksu.
-    /// @param kandidatIndeks Indeks u nizu kandidata.
+    /// @param kandidatIndeks Indeks kandidata u nizu kandidata.
     function glasaj(uint256 kandidatIndeks) external {
         require(!jeGlasao[msg.sender], unicode"Već ste glasali!");
         require(
